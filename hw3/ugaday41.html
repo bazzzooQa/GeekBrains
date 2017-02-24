@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Угадайка</title>
+    <link rel="stylesheet" href="./style.css">
+    <script> function UGADAY41() {
+                var ans = parseInt(Math.random() * 100);
+                var att = 1;
+                var attCounter = 5;
+                while (att <= attCounter) {
+                  var userAns1 = prompt("Угадайте число от 0 до 100. Вам дано 5 попыток. \nПопытка №" + att);
+                  userAns1 = parseInt(userAns1);
+
+                //проверяем ответы Игрока №1
+                  if (userAns1 == ans) {
+                  alert("Вы угадали число! Компьютер загадал " + ans);
+                  break;
+                  }
+
+                  else if (userAns1 > ans) {
+                      alert("Вы не угадали, ваше число слишком большое!");
+                  }
+
+                  else if (userAns1 < ans) {
+                      alert("Вы не угадали, ваше число слишком маленькое!");
+                  }
+
+                  att++;
+                }
+                  if (att > attCouner) {
+                    alert("К сожалению, вы не смогли угадать число");
+                  }
+              }
+    </script>
+</head>
+<body>
+    <div id="content">
+        <div id="header">
+            <a href="./site.html">Главная</a> <span>/</span>
+            <a href="./zagad.html">Загадки</a> <span>/</span>
+            <a href="./ugaday41.html">Угадайка</a> <span>/</span>
+            <a href="./ugaday42.html">Угадайка мультиплеер</a>
+        </div>
+        <h1>Угадай-ка!</h1>
+
+        <div id="center">
+        <img id="riddler" src="./img/comp.png" alt="Компьютер">
+            <div id="box_text">
+                <p>Попробуй отгадать число (от 0 до 100), которое я загадал...</p>
+                <p><a href="#" id="button" onclick="UGADAY41 ()">Попробовать!</a><br><br><br></p>
+                <a href="./site.html">Главная</a> <a href="./zagad.html">Загадки</a> <a href="./ugaday41.html">Угадайка</a> <a href="./ugaday42.html">Угадайка мультиплеер</a>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+    <div id="footer">Copyright © 2016 <a href="https://geekbrains.ru/" target="_blank">GeekBrains</a></div>
+</body>
+
+</html>

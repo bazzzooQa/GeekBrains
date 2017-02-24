@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Время для загадок</title>
+    <link rel="stylesheet" href="./style.css">
+    <script> function VAPROS() {
+      var name = prompt("Здравствуй! Скажи мне как тебя зовут...");
+      var f = 0;
+      var n = 1;
+      alert(name + ", я хочу сыграть с тобой в игру...");
+      alert("Отгадай загадки!");
+
+          function Zagadka(vopros, protvet) {
+            var otvet = prompt("Загадка №" + n + "\n" + vopros);
+            if (otvet == protvet) {
+                alert("Поздравляю, твой ответ правильный...");
+                return f++, n++;
+            } else {
+                alert("Ты был недостаточно внимателен.\nПравильный ответ " + protvet);
+                return n++;
+            }
+          }
+
+      Zagadka("Если б не было его,\nНе сказал бы ничего.", "язык");
+      Zagadka("Ночью каждое оконце\nСлабо освещает ...", "луна");
+      Zagadka("Под деревом четыре льва\nОдин ушел, осталось ...", "3");
+      Zagadka("Паровоз\nБез колёс!\nВот так чудо-паровоз!\nНе с ума ли он сошёл —\nПрямо по морю пошёл!", "пароход");
+
+      if (f == 0) {
+      alert("Ни одного верного ответа =(\nНу ничего, ничего... Зато ты красивый.")
+      }
+      else if (f == 1) {
+      alert("Один правильный ответ =|.\nТебе что, три года что ли?!")
+      }
+      else if (f == 2) {
+      alert("Два правильных ответа =|.\nТы старался, просто сегодня не твой день")
+      }
+      else if (f == 3) {
+      alert("Три правильных ответа =).\nОбидно, но ты был близок.")
+      }
+      else if (f == 4) {
+      alert("Отгадал все загадки?\nВ следующий раз попробуй без гугла.")
+      }
+    }
+
+    </script>
+</head>
+<body>
+    <div id="content">
+        <div id="header">
+            <a href="./site.html">Главная</a> <span>/</span>
+            <a href="./zagad.html">Загадки</a> <span>/</span>
+            <a href="./ugaday41.html">Угадайка</a> <span>/</span>
+            <a href="./ugaday42.html">Угадайка мультиплеер</a>
+        </div>
+        <h1>Загадки?</h1>
+
+        <div id="center">
+        <img id="riddler" src="./img/riddler.png" alt="Загадочник">
+            <div id="box_text">
+                <p>Попробуй отгадать мои загадки...</p>
+                <p><a href="#" id="button" onclick="VAPROS ()">Отгадать!</a><br><br><br></p>
+                <a href="./site.html">Главная</a> <a href="./zagad.html">Загадки</a> <a href="./ugaday41.html">Угадайка</a> <a href="./ugaday42.html">Угадайка мультиплеер</a>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+    <div id="footer">Copyright © 2016 <a href="https://geekbrains.ru/" target="_blank">GeekBrains</a></div>
+</body>
+
+</html>

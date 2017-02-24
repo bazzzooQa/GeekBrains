@@ -1,0 +1,54 @@
+<!DOCTYPE=html>
+<meta charset="utf-8">
+<html>
+<head​>
+ <meta ​charset=​"utf-8"​>
+ <title​>Угадай число. <br>Версия для двух игроков.</title​>
+</head​>
+<body>
+  <script>
+
+    var ans = parseInt(Math.random() * 100);
+    var att = 1;
+    var attCounter = 5;
+    while (att <= attCounter) {
+      var userAns1 = prompt("Угадайте число от 0 до 100. Каждому из вас дано 5 попыток. \nИгрок №1. Попытка №" + att);
+      userAns1 = parseInt(userAns1);
+      var userAns2 = prompt("Угадайте число от 0 до 100. Каждому из вас дано 5 попыток. \nИгрок №2. Попытка №" + att);
+      userAns2 = parseInt(userAns2);
+//проверяем ответы Игрока №1
+      if (userAns1 == ans) {
+      alert("Игрок №1 угадал число! Компьютер загадал " + ans);
+        if (userAns2 == ans ) {
+          alert("Игрок №2 тоже угадал число!");
+          break;
+        }
+      break;
+      }
+      else if (userAns1 > ans){
+          alert("Игрок №1, ваше число слишком большое!");
+      }
+      else if (userAns1 < ans){
+          alert("Игрок №1, ваше число слишком маленькое!");
+      }
+
+//проверяем ответы Игрока №2
+      if (userAns2 == ans) {
+      alert("Игрок №2 угадал число! Компьютер загадал " + ans);
+      break;
+      }
+      else if (userAns2 > ans){
+          alert("Игрок №2, ваше число слишком большое!");
+      }
+      else if (userAns2 < ans){
+          alert("Игрок №2, ваше число слишком маленькое!");
+      }
+      att++
+    }
+
+      if (att > attCouner) {
+        alert("К сожалению, никто не смог угадать число");
+      }
+  </script>
+</body>
+</html>
